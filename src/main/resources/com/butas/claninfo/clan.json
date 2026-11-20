@@ -1,0 +1,262 @@
+{
+  "_info": "BOC Lietuva RuneLite plugino turinys. Pakeitimai pasiekia visus žaidėjus per ~15 min., RuneLite peržiūros nereikia. Saugok teisingą JSON formatą (kabutės, kableliai)!",
+  "clanName": "BOC Lietuva",
+  "about": "Lietuviškas OSRS klanas visiems account'ams: PvM, raidai, event'ai ir pagalba naujokams.",
+  "discordUrl": "https://discord.gg/Gz2PDp6aFM",
+  "streamUrl": "https://www.youtube.com/@PlikaMamyte",
+  "streamLabel": "Žiūrėti klano streamą",
+  "joinSteps": [
+    "Atsidaryk Clan tab'ą ir prisijunk prie guest chat'o „BOC Lietuva“.",
+    "Pasitikrink, ar turi bent 1250 total level.",
+    "Susidiek privalomus RuneLite pluginus (žr. žemiau).",
+    "Paprašyk pakvietimo Mindaugo ir susitik su juo žaidime.",
+    "Prisijunk prie mūsų Discord'o – nickname'e nurodyk savo OSRS vardą."
+  ],
+  "contacts": "Mindaugas",
+  "requiredPlugins": [
+    {
+      "name": "Wise Old Man",
+      "plugin": "Wise Old Man"
+    },
+    {
+      "name": "WikiSync",
+      "plugin": "WikiSync"
+    },
+    {
+      "name": "XP Updater",
+      "plugin": "XP Updater",
+      "config": "xpupdater.wiseoldman",
+      "configHint": "nustatymuose pažymėk „Wise Old Man“"
+    }
+  ],
+  "requiredPluginsNote": "Be jų neveiks automatinis rolių skyrimas ir event'ų sekimas.",
+  "streamers": [
+    {
+      "name": "YourMomsBald",
+      "role": "Klano lyderis",
+      "url": "https://www.youtube.com/@PlikaMamyte"
+    }
+  ],
+  "ranksIntro": "Kiekvienam rank'ui reikia ir visko, ko reikia žemesniems. Iš karto gauni aukščiausią rank'ą, kurį atitinki (iki Rune; nuo Dragon – ir laikas BOC). Discord rank'ą botas suteikia automatiškai ir jis niekada nenukrenta.",
+  "tiers": [
+    {
+      "title": "Naujokai – Trial",
+      "note": "Event taškų dar negauni. Nepasiekęs kito rank'o laiku gali būti pašalintas.",
+      "ranks": [
+        {
+          "name": "Gnome Child",
+          "color": "#78c85a",
+          "total": 1250,
+          "other": [
+            "per 1 mėn. pasiekti Bronze"
+          ]
+        },
+        {
+          "name": "Bronze",
+          "color": "#cd7f32",
+          "total": 1500,
+          "other": [
+            "per 2 mėn. pasiekti Iron"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Metalai – Account building",
+      "note": "Nuo Iron – pilnateisis narys: renki event taškus (SOTW, BOTW, ROTW, Clue Master), matai narių kanalus. Jokių terminų.",
+      "ranks": [
+        {
+          "name": "Iron",
+          "color": "#aaaaaa",
+          "total": 1650,
+          "other": [
+            "visi Easy diaries",
+            "Easy CA",
+            "Fire cape",
+            "esi Discord'e (OSRS vardas nickname'e)"
+          ]
+        },
+        {
+          "name": "Steel",
+          "color": "#788ca0",
+          "total": 1750,
+          "skills": {
+            "slayer": 70
+          },
+          "other": [
+            "Medium diaries 6/12",
+            "Medium CA",
+            "100 boss KC",
+            "Recipe for Disaster"
+          ]
+        },
+        {
+          "name": "Mithril",
+          "color": "#5a6edc",
+          "total": 1850,
+          "skills": {
+            "attack": 90,
+            "strength": 90,
+            "defence": 90,
+            "ranged": 90,
+            "magic": 90,
+            "prayer": 77
+          },
+          "other": [
+            "visi Medium diaries"
+          ]
+        },
+        {
+          "name": "Adamant",
+          "color": "#50a05a",
+          "total": 1950,
+          "skills": {
+            "slayer": 85
+          },
+          "other": [
+            "Hard diaries 6/12",
+            "Hard CA",
+            "500 boss KC",
+            "Dragon Slayer II",
+            "100 Vorkath KC"
+          ]
+        },
+        {
+          "name": "Rune",
+          "color": "#50bed2",
+          "total": 2000,
+          "skills": {
+            "herblore": 78
+          },
+          "other": [
+            "visi Hard diaries",
+            "Song of the Elves",
+            "10 Corrupted Gauntlet KC"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dragon – Raidų pradžia",
+      "note": "Nuo čia skaičiuojamas laikas BOC. Raid KC = CoX + ToB + ToA + TFA, visi režimai kartu.",
+      "ranks": [
+        {
+          "name": "Dragon",
+          "color": "#dc3c3c",
+          "total": 2050,
+          "months": 1,
+          "other": [
+            "Elite diaries 3/12",
+            "Desert Treasure II",
+            "50 raid KC"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Karininkai – End-game PvM",
+      "ranks": [
+        {
+          "name": "Officer",
+          "color": "#e6b43c",
+          "total": 2100,
+          "months": 2,
+          "other": [
+            "Elite CA",
+            "100 raid KC"
+          ]
+        },
+        {
+          "name": "Commander",
+          "color": "#e6b43c",
+          "total": 2150,
+          "months": 3,
+          "other": [
+            "Elite diaries 6/12",
+            "200 raid KC (25+ kiekviename iš 4 raidų)",
+            "Infernal cape arba Dizana's quiver"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aukštoji vadovybė – Raid veterans",
+      "note": "Aukščiausi BOC rank'ai in-game ir Discord'e.",
+      "ranks": [
+        {
+          "name": "Colonel",
+          "color": "#f08c28",
+          "total": 2200,
+          "months": 4,
+          "other": [
+            "Elite diaries 9/12",
+            "Infernal cape ir Dizana's quiver",
+            "3B banko vertė"
+          ]
+        },
+        {
+          "name": "Brigadier",
+          "color": "#f08c28",
+          "months": 6,
+          "other": [
+            "visi Elite diaries",
+            "400 raid KC (50+ kiekviename)",
+            "Master CA"
+          ]
+        },
+        {
+          "name": "Admiral",
+          "color": "#f08c28",
+          "months": 7,
+          "other": [
+            "600 raid KC (100+ kiekviename)",
+            "awakened kill'as visiems 4 DT2 bosams"
+          ]
+        },
+        {
+          "name": "Marshal",
+          "color": "#f08c28",
+          "months": 8,
+          "other": [
+            "Grandmaster CA"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Legendos",
+      "ranks": [
+        {
+          "name": "Maxed",
+          "color": "#b478e6",
+          "total": 2376,
+          "other": [
+            "visi skill'ai 99"
+          ]
+        },
+        {
+          "name": "Myth",
+          "color": "#b478e6",
+          "other": [
+            "1000 collection log slot'ų",
+            "1000 raid KC"
+          ]
+        }
+      ]
+    }
+  ],
+  "howChecked": [
+    "Skill'ai, boss ir raid KC – iš Wise Old Man (hiscores). Pakėlęs level'į ar KC – relog'ink.",
+    "Boss KC hiscores'uose matomas tik nuo 5 kill'ų, todėl Fire cape botas pamatys per collection log.",
+    "Diaries, CA, questai ir collection log – iš WikiSync. Collection log: atsidaryk jį in-game ir spausk WikiSync mygtuką.",
+    "Banko vertė – ticket'as #bank-approval su Bank Memory eksportu (galioja 90 d.).",
+    "Nežaidi 14+ d. – gauni Anchor žymę: rank'as lieka, bet laikas BOC sustoja.",
+    "Pasikeitei vardą? Pateik name change wiseoldman.net, kitaip botas tavęs neatnaujins."
+  ],
+  "bot": [
+    "Rank'ai atnaujinami automatiškai kas 3 valandas, apie naują rank'ą botas praneša #rank-up-ir-aktyvumas.",
+    "!rankup – iškart atnaujina tavo account'ą ir parodo, ko trūksta iki kito rank'o.",
+    "!ranks – visos rank'ų kopėčios.",
+    "Klausimų? Rašyk Support komandai Discord'e."
+  ]
+}
