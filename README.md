@@ -1,25 +1,36 @@
-# BOC Lietuva (RuneLite plugin)
+# BOC Lietuva
 
-Adds a side-panel button to RuneLite that shows players how to join the BOC Lietuva clan:
-about text, join steps, requirements, who to ask for an invite, and buttons for
-"Copy clan name", Discord and an extra link (website / stream).
+RuneLite plugin for the Lithuanian OSRS clan **BOC Lietuva**.
+*Lietuviškai: BOC Lietuva klano pluginas – kaip įstoti, renginiai, rank'ai ir streamai tiesiai RuneLite'e.*
 
-Everything is edited in the plugin's settings (wrench icon → BOC Lietuva) – no rebuild needed.
-Multi-line fields (join steps, requirements) use one item per line.
+## Features
+- **How to join** – steps, requirements and who to contact (shown first to non-members).
+- **Clan events** – *Vyksta dabar* (live) and *Artėjantys renginiai* (upcoming), taken automatically from the
+  clan's [Wise Old Man competitions](https://wiseoldman.net/groups/9521/competitions), with the top 3 and
+  the player's own place. Extra events (breaks, bingo…) come from [`events.txt`](events.txt).
+- **Member view** – clan members see events first, their current clan rank and a checklist for the next rank
+  (total level, skill levels and time in the clan are read from the game).
+- **Required plugins check** – shows whether Wise Old Man, WikiSync and XP Updater (with its Wise Old Man
+  option) are installed and enabled.
+- **Stream alerts** – a chatbox message and a LIVE marker when a clan streamer goes live on YouTube.
+- **Chat reminders** – on login: live events and missing required plugins; event start and last 24 hours.
+
+## Editing clan content (no plugin update needed)
+Changes reach all players within ~15 minutes:
+- [`clan.json`](clan.json) – texts, links, required plugins, streamers and the rank ladder.
+  A copy is bundled in the plugin as a fallback.
+- [`events.txt`](events.txt) – events that are not Wise Old Man competitions (format explained in the file).
+- Wise Old Man – competitions created for group 9521 appear automatically.
+
+## Network use
+The plugin only makes these requests, without sending any personal or account data:
+- `raw.githubusercontent.com` – this repository's `clan.json` and `events.txt` (every 15 min)
+- `api.wiseoldman.net` – the clan's public competitions and their leaderboards (every 15 min)
+- `www.youtube.com` – the public `/live` page of the clan streamers listed in `clan.json` (every 5 min;
+  can be turned off in the plugin settings)
+
+Clan membership, clan rank title, join date and levels are read locally from the game client and are not sent anywhere.
 
 ## Run it locally
-Requires JDK 11+ (IntelliJ IDEA recommended).
-
-Open the folder in IntelliJ IDEA (it imports the Gradle project automatically) and run
-the `run` Gradle task, or run `ClanInfoPluginTest.main` in src/test.
-This starts a developer RuneLite client with the plugin loaded – log in normally.
-
-## Publish to the Plugin Hub
-1. Push this folder to a public GitHub repo.
-2. Fork https://github.com/runelite/plugin-hub, add `plugins/boc-lietuva` with:
-       repository=https://github.com/AndriusButas/boc-lietuva.git
-       commit=<full commit hash>
-3. Open a pull request and wait for review.
-
-Note: the defaults in ClanInfoConfig.java are what new users see before editing
-settings – set them to your real clan name/Discord before publishing a clan-specific build.
+Requires JDK 11+. Open the folder in IntelliJ IDEA, or from a terminal run `gradlew run`.
+This starts a developer RuneLite client with the plugin loaded.
