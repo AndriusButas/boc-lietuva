@@ -1,0 +1,15 @@
+# BOC Lietuva renginiai – juos rodo RuneLite pluginas „BOC Lietuva“.
+# Viena eilutė = vienas renginys. Eilutės, prasidedančios #, ignoruojamos.
+#
+# Formatas:  Pavadinimas | Pradžia | Pabaiga | Aprašymas
+#   Data:    2026-11-16        (visa diena)
+#            2026-11-27 20:00  (konkretus laikas, Lietuvos laiku)
+#   Pabaigą ir aprašymą galima palikti tuščius. Jei data dar nežinoma – palik pradžią tuščią.
+#   Pluginas pats nusprendžia, kas „Vyksta dabar“, o kas „Artėjantys renginiai“.
+#   Pasibaigę renginiai nerodomi – juos galima palikti arba ištrinti.
+
+Galvų medžioklė (Bounty Hunter) | 2026-11-01 | 2026-11-30 | Vyksta visą lapkričio mėnesį
+Savaitės įgūdžio varžybos (SOTW) | 2026-11-16 | 2026-11-22 |
+Savaitės boso varžybos (BOTW) | 2026-11-23 | 2026-11-29 |
+Poilsis | 2026-11-30 | 2026-12-01 | 2 dienos be renginių
+Gruodžio Bingo! | | | Sekite naujienas Discord'e
