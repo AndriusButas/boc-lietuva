@@ -4,99 +4,55 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
+/**
+ * Player settings. Only personal preferences live here; clan texts come from clan.json (ClanContent).
+ */
 @ConfigGroup(ClanInfoConfig.GROUP)
 public interface ClanInfoConfig extends Config
 {
 	String GROUP = "claninfo";
 
 	@ConfigItem(
-		keyName = "clanName",
-		name = "Clan name",
-		description = "The in-game clan name players should look for",
-		position = 1
+		keyName = "streamCheck",
+		name = "Tikrinti, ar streamina",
+		description = "Kas 5 min. patikrina klano streamerių YouTube kanalus (jungiasi prie youtube.com)",
+		position = 21
 	)
-	default String clanName()
+	default boolean streamCheck()
 	{
-		return "BOC Lietuva";
+		return true;
 	}
 
 	@ConfigItem(
-		keyName = "about",
-		name = "About",
-		description = "Short description of the clan",
-		position = 2
+		keyName = "streamChatMessage",
+		name = "Žinutė chatbox'e",
+		description = "Parodyti žinutę tavo chatbox'e, kai streameris pradeda transliaciją",
+		position = 22
 	)
-	default String about()
+	default boolean streamChatMessage()
 	{
-		return "A friendly clan for all account types. We do bossing, skilling events and help new players.";
+		return true;
 	}
 
 	@ConfigItem(
-		keyName = "joinSteps",
-		name = "How to join",
-		description = "Steps to join the clan, one step per line",
-		position = 3
+		keyName = "streamNotification",
+		name = "RuneLite pranešimas",
+		description = "Taip pat parodyti RuneLite (darbalaukio) pranešimą",
+		position = 23
 	)
-	default String joinSteps()
+	default boolean streamNotification()
 	{
-		return "Open the Clan tab (Grouping → Your Clan).\n"
-			+ "Join our guest chat: click 'Guest' and type BOC Lietuva.\n"
-			+ "Ask Mindaugas for an invite.\n"
-			+ "Meet Mindaugas in-game to receive the 'Recruit' invite.";
+		return false;
 	}
 
 	@ConfigItem(
-		keyName = "requirements",
-		name = "Requirements",
-		description = "Requirements to join, one per line (leave empty to hide)",
-		position = 4
+		keyName = "clanMessages",
+		name = "Klano priminimai chatbox'e",
+		description = "Prisijungus – kas vyksta ir ar netrūksta privalomų pluginų; renginio pradžia ir paskutinė para",
+		position = 20
 	)
-	default String requirements()
+	default boolean clanMessages()
 	{
-		return "Total level 1500+";
-	}
-
-	@ConfigItem(
-		keyName = "contacts",
-		name = "Contact (RSN)",
-		description = "Who to message in-game for an invite, comma separated",
-		position = 5
-	)
-	default String contacts()
-	{
-		return "Mindaugas";
-	}
-
-	@ConfigItem(
-		keyName = "discordUrl",
-		name = "Discord invite",
-		description = "Discord invite link (leave empty to hide the button)",
-		position = 6
-	)
-	default String discordUrl()
-	{
-		return "https://discord.gg/your-invite";
-	}
-
-	@ConfigItem(
-		keyName = "websiteUrl",
-		name = "Website / stream",
-		description = "Optional extra link, e.g. clan website or YouTube channel",
-		position = 7
-	)
-	default String websiteUrl()
-	{
-		return "https://www.youtube.com/";
-	}
-
-	@ConfigItem(
-		keyName = "websiteLabel",
-		name = "Extra link label",
-		description = "Button text for the extra link",
-		position = 8
-	)
-	default String websiteLabel()
-	{
-		return "Watch our stream";
+		return true;
 	}
 }
