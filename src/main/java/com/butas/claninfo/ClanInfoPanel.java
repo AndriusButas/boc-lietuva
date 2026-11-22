@@ -38,6 +38,7 @@ class ClanInfoPanel extends PluginPanel
 	private static final String RED = "#ff4b4b";
 	private static final String GREEN = "#3cc86e";
 	private static final String ORANGE = "#ff981f";
+	private static final String AUTHOR_DISCORD = "https://discord.com/users/1001209523685564466";
 
 	private static final String S_LIVE = "Vyksta dabar";
 	private static final String S_UPCOMING = "Artėjantys renginiai";
@@ -127,6 +128,26 @@ class ClanInfoPanel extends PluginPanel
 			section(S_CHECKED, false, body -> addTo(body, textLabel(bulletList(c.howChecked))));
 			section(S_BOT, false, body -> addTo(body, textLabel(bulletList(c.bot))));
 		}
+
+		// Credits: the author's name opens his Discord profile
+		content.add(Box.createVerticalStrut(16));
+		JLabel credits = new JLabel("<html>BOC Lietuva pluginą sukūrė <b><u>Etiopijus</u></b></html>");
+		credits.setFont(bodyFont().deriveFont(11f));
+		credits.setForeground(ColorScheme.LIGHT_GRAY_COLOR.darker());
+		credits.setToolTipText("Atidaryti Etiopijus Discord profilį");
+		credits.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		credits.setBorder(BorderFactory.createCompoundBorder(
+			BorderFactory.createMatteBorder(1, 0, 0, 0, ColorScheme.MEDIUM_GRAY_COLOR),
+			new EmptyBorder(8, 0, 0, 0)));
+		credits.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mouseClicked(MouseEvent e)
+			{
+				LinkBrowser.browse(AUTHOR_DISCORD);
+			}
+		});
+		addTo(content, credits);
 
 		content.revalidate();
 		content.repaint();
