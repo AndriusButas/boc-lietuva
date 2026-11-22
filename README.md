@@ -34,3 +34,7 @@ Clan membership, clan rank title, join date and levels are read locally from the
 ## Run it locally
 Requires JDK 11+. Open the folder in IntelliJ IDEA, or from a terminal run `gradlew run`.
 This starts a developer RuneLite client with the plugin loaded.
+
+## Changes
+- **2026-11-22** – Added an author credit at the bottom of the panel ("BOC Lietuva pluginą sukūrė Etiopijus"); clicking the name opens the author's Discord profile.
+- **2026-11-20** – First version submitted to the Plugin Hub: how to join, clan events with Wise Old Man leaderboards, member view with rank checklist, required plugin check, stream alerts and chat reminders.
